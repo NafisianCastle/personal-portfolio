@@ -14,10 +14,12 @@
     "framer-motion": "^11.18.2",
     "katex": "^0.16.47",
     "next": "16.3.0",
+    "notion-client": "^6.16.0",
     "notion-utils": "^6.16.0",
     "prismjs": "^1.30.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "react-github-calendar": "^4.5.11",
     "react-notion-x": "^6.16.0",
     "tailwind-merge": "^2.6.1"
   },

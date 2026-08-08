@@ -66,6 +66,29 @@ export default async function BlogPostPage({
 
   const recordMap = await getPageBlocks(post.id);
 
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://nafisurrahman.dev";
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.publishedDate,
+    author: {
+      "@type": "Person",
+      name: "Nafisur Rahman",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Nafisur Rahman",
+      url: SITE_URL,
+    },
+    url: `${SITE_URL}/blog/${post.slug}`,
+    ...(post.coverImage ? { image: post.coverImage } : {}),
+    keywords: post.tags.join(", "),
+  };
+
   return (
     <PageLayout>
       <Navbar />
@@ -141,6 +164,12 @@ export default async function BlogPostPage({
           </div>
         </Container>
       </main>
+
+      {/* Article structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </PageLayout>
   );
 }

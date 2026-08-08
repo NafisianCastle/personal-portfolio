@@ -7,6 +7,7 @@ import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import GitHubActivity from "@/components/sections/GitHubActivity";
 import Certifications from "@/components/sections/Certifications";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -20,8 +21,7 @@ export default function Home() {
         <Projects />
         <GitHubActivity />
         <Certifications />
-        {/* Contact section added in Task 8 */}
-        <div id="contact" className="h-1" aria-hidden="true" />
+        <Contact />
       </main>
     </PageLayout>
   );

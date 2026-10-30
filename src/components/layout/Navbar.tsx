@@ -113,11 +113,12 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <a
-            href="/Nafisur_Rahman_CV.pdf"
-            download
+            href="https://docs.google.com/document/d/14KmkjN-5SV3HFiou4ZYKA2eMr0R4vvSRrFijoG1Kcr8/edit?tab=t.0"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-lg border border-brand-500/60 px-4 py-1.5 text-sm font-semibold text-brand-400 transition-all duration-200 hover:bg-brand-500/10 hover:border-brand-400 md:block"
           >
-            Download CV
+            See Resume
           </a>
 
           {/* Mobile hamburger */}
@@ -179,12 +180,13 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: NAV_LINKS.length * 0.05 + 0.1 }}
-                href="/Nafisur_Rahman_CV.pdf"
-                download
+                href="https://docs.google.com/document/d/14KmkjN-5SV3HFiou4ZYKA2eMr0R4vvSRrFijoG1Kcr8/edit?tab=t.0"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 rounded-lg border border-brand-500/60 px-4 py-2 text-center text-sm font-semibold text-brand-400 hover:bg-brand-500/10"
                 onClick={() => setMobileOpen(false)}
               >
-                Download CV
+                See Resume
               </motion.a>
             </nav>
           </motion.div>

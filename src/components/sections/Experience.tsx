@@ -132,6 +132,7 @@ function TimelineEntry({
         </p>
 
         {/* Highlights */}
+        {item.highlights.length > 0 && (
         <ul className="mb-5 flex flex-col gap-2.5" aria-label="Key highlights">
           {item.highlights.map((h, i) => (
             <motion.li
@@ -149,6 +150,7 @@ function TimelineEntry({
             </motion.li>
           ))}
         </ul>
+        )}
 
         {/* Tech tags */}
         <div className="flex flex-wrap gap-2" aria-label="Technologies used">

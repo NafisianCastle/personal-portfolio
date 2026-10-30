@@ -6,9 +6,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const highlights = [
   { value: "4+", label: "Years of Experience" },
-  { value: "2", label: "Countries Deployed" },
-  { value: "10+", label: "Technologies Mastered" },
-  { value: "∞", label: "Workflows Automated" },
+  { value: "50%", label: "Faster Release Cycle" },
+  { value: "32h", label: "Manual Work Saved / Month" },
+  { value: "95%", label: "Document Extraction Accuracy" },
 ];
 
 const itemVariants = {
@@ -118,10 +118,9 @@ export default function About() {
             <span className="font-semibold text-text-primary">
               Senior Software Engineer at WellDev
             </span>{" "}
-            with over 4 years of hands-on experience building enterprise-grade
-            applications across the full stack — from robust .NET Core APIs and
-            Azure cloud infrastructure to modern Next.js frontends and
-            Power Platform automations.
+            with ~4 years building production .NET systems, promoted from
+            Trainee to Senior in under three years. I own services end to end:
+            domain modelling, API design, deployment, and production support.
           </motion.p>
 
           <motion.p
@@ -131,11 +130,11 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-base leading-relaxed text-text-secondary sm:text-lg"
           >
-            My core expertise lies in{" "}
-            <span className="font-semibold text-brand-400">workflow automation</span> —
-            designing and implementing complex business processes using Azure Logic Apps
-            and Power Automate that turn manual, error-prone operations into
-            reliable, scalable systems.
+            I specialise in{" "}
+            <span className="font-semibold text-brand-400">real-time, event-driven backends</span> —
+            gRPC and MQTT services, background data pipelines and Azure CI/CD —
+            currently shipping journey-planning and dispatch systems for Swiss
+            public transport operators.
           </motion.p>
 
           <motion.p
@@ -145,12 +144,12 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base leading-relaxed text-text-secondary sm:text-lg"
           >
-            I also have deep experience in{" "}
+            Beyond that, I automate business processes with{" "}
             <span className="font-semibold text-accent-400">
-              cross-tenant Azure Pipeline deployments
+              Azure Functions, Logic Apps and Power Automate
             </span>
-            , Shopify theme and plugin development, and integrating
-            Azure AI services into real-world products.
+            , mentor fellow engineers, and build offline-first apps on the side
+            — I hold a B.Sc. in Computer Science and Engineering from AIUB.
           </motion.p>
 
           {/* Specialisation tags */}
@@ -162,11 +161,11 @@ export default function About() {
             className="flex flex-wrap gap-2 pt-2"
           >
             {[
-              "Workflow Automation",
-              "Cloud Architecture",
-              "API Design",
+              "Real-time Systems",
+              "gRPC & MQTT",
+              "Clean Architecture",
               "CI/CD Pipelines",
-              "Cross-Tenant Deployments",
+              "Observability",
             ].map((tag) => (
               <span
                 key={tag}

@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog — Nafisur Rahman",
   description:
-    "Articles on .NET, Azure, workflow automation, Power Platform, and software engineering by Nafisur Rahman.",
+    "Articles on .NET, Azure, real-time systems, DevOps, and software engineering by Nafisur Rahman.",
 };
 
 function formatDate(dateStr: string): string {
@@ -39,7 +39,7 @@ export default async function BlogIndexPage() {
               Blog
             </h1>
             <p className="text-base leading-relaxed text-text-secondary sm:text-lg">
-              Thoughts on .NET, Azure, automation, Power Platform, and
+              Thoughts on .NET, Azure, real-time systems, DevOps, and
               engineering in general — written as I learn and build.
             </p>
           </div>

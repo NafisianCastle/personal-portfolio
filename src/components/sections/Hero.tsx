@@ -173,9 +173,10 @@ export default function Hero() {
             variants={itemVariants}
             className="mb-8 max-w-2xl text-base leading-relaxed text-text-secondary sm:text-lg"
           >
-            I build cloud-native applications, automate complex workflows, and ship
-            scalable systems — from .NET backends and Azure infrastructure to
-            Next.js frontends and Power Platform integrations.
+            I build real-time, event-driven .NET backends — gRPC and MQTT
+            services, background data pipelines, and Azure CI/CD — shipping
+            journey-planning and dispatch systems for Swiss public transport
+            operators.
           </motion.p>
 
           {/* Tech pills */}
@@ -185,12 +186,12 @@ export default function Hero() {
             aria-label="Key technologies"
           >
             {[
-              ".NET Core",
-              "Azure",
+              "C# / .NET",
+              "gRPC",
+              "MQTT",
+              "Azure Pipelines",
+              "OpenTelemetry",
               "Next.js",
-              "Power Automate",
-              "Azure DevOps",
-              "PostgreSQL",
             ].map((t) => (
               <TechPill key={t} label={t} />
             ))}
@@ -231,9 +232,9 @@ export default function Hero() {
           >
             <StatBadge value="4+" label="Years Experience" />
             <div className="h-10 w-px bg-surface-700/50 self-center" aria-hidden="true" />
-            <StatBadge value="10+" label="Technologies" />
+            <StatBadge value="50%" label="Faster Releases" />
             <div className="h-10 w-px bg-surface-700/50 self-center" aria-hidden="true" />
-            <StatBadge value="∞" label="Workflows Automated" />
+            <StatBadge value="32h" label="Manual Work Saved / Month" />
           </motion.div>
         </motion.div>
 

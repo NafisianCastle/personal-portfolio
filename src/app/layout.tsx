@@ -23,28 +23,26 @@ export const metadata: Metadata = {
     template: "%s — Nafisur Rahman",
   },
   description:
-    "Senior Software Engineer at WellDev with 4+ years of experience in .NET Core, Azure, Next.js, Power Platform, and workflow automation.",
+    "Senior Software Engineer at WellDev with ~4 years of experience building real-time .NET backends (gRPC, MQTT), data pipelines, and Azure CI/CD for Swiss public transport operators.",
   keywords: [
     "Nafisur Rahman",
     "Senior Software Engineer",
     "WellDev",
     "ASP.NET Core",
-    "Azure",
+    "C#",
+    "gRPC",
+    "MQTT",
+    "Azure Pipelines",
+    "OpenTelemetry",
     "Next.js",
-    "Power Automate",
-    "Azure DevOps",
-    "Azure Logic Apps",
-    "Workflow Automation",
-    "Cross-Tenant Deployment",
-    "PostgreSQL",
-    "Shopify Development",
+    "Clean Architecture",
   ],
   authors: [{ name: "Nafisur Rahman", url: SITE_URL }],
   creator: "Nafisur Rahman",
   openGraph: {
     title: "Nafisur Rahman — Senior Software Engineer",
     description:
-      "Senior Software Engineer at WellDev with 4+ years of experience in .NET Core, Azure, Next.js, and Power Platform.",
+      "Senior Software Engineer at WellDev building real-time .NET backends (gRPC, MQTT) and Azure CI/CD.",
     url: SITE_URL,
     siteName: "Nafisur Rahman",
     type: "website",
@@ -62,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nafisur Rahman — Senior Software Engineer",
     description:
-      "Senior Software Engineer at WellDev with 4+ years of experience in .NET Core, Azure, Next.js, and Power Platform.",
+      "Senior Software Engineer at WellDev building real-time .NET backends (gRPC, MQTT) and Azure CI/CD.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -100,18 +98,18 @@ export default function RootLayout({
       url: "https://welldev.io",
     },
     description:
-      "Senior Software Engineer with 4+ years of experience in .NET Core, Azure, Next.js, and workflow automation.",
+      "Senior Software Engineer with ~4 years of experience building real-time .NET backends, data pipelines, and Azure CI/CD.",
     knowsAbout: [
       "ASP.NET Core",
-      "Azure",
+      "gRPC",
+      "MQTT",
+      "Azure Pipelines",
+      "OpenTelemetry",
       "Next.js",
-      "Power Automate",
-      "Azure DevOps",
-      "Workflow Automation",
     ],
     sameAs: [
-      "https://github.com/nafisurrahman",
-      "https://linkedin.com/in/nafisurrahman",
+      "https://github.com/NafisianCastle",
+      "https://www.linkedin.com/in/nafisiancastle/",
     ],
   };
 

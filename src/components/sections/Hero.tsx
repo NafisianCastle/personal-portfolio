@@ -210,11 +210,12 @@ export default function Hero() {
               <span className="absolute inset-0 -translate-x-full bg-white/10 skew-x-12 transition-transform duration-500 group-hover:translate-x-full" />
             </button>
             <a
-              href="/Nafisur_Rahman_CV.pdf"
-              download
+              href="https://docs.google.com/document/d/14KmkjN-5SV3HFiou4ZYKA2eMr0R4vvSRrFijoG1Kcr8/edit?tab=t.0"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-xl border border-surface-600 bg-surface-800/50 px-6 py-3 text-sm font-bold text-text-primary transition-all duration-200 hover:border-brand-500/50 hover:bg-surface-700"
             >
-              Download CV
+              See Resume
             </a>
             <button
               onClick={() => scrollToSection("#contact")}

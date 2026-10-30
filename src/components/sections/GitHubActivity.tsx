@@ -53,7 +53,7 @@ function StatCard({
 /* ── GitHub Activity section ─────────────────────────────────────────────── */
 export default function GitHubActivity() {
   // Replace with your actual GitHub username
-  const GITHUB_USERNAME = "nafisurrahman";
+  const GITHUB_USERNAME = "NafisianCastle";
 
   const theme = {
     light: [

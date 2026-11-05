@@ -19,11 +19,11 @@ export const experiences: ExperienceItem[] = [
     company: "WellDev Ltd",
     companyUrl: "https://welldev.io",
     location: "Dhaka, Bangladesh (clients in Switzerland/EU)",
-    startDate: "Oct 2022",
+    startDate: "Jul 2025",
     endDate: "Present",
     type: "full-time",
     summary:
-      "Promoted from Trainee (Oct 2022) to Junior (May 2023), Software Engineer (Jul 2024) and Senior (Jul 2025). Building real-time, event-driven .NET backends and Azure automation for Swiss public transport operators and enterprise clients.",
+      "Owning real-time, event-driven .NET backends and Azure automation end to end for Swiss public transport operators and enterprise clients. The highlights below cover my work across my time at WellDev.",
     highlights: [
       "Built the background worker that parses and transforms VDV-452 journey-planning data for a Swiss Intermodal Transport Control System (ITCS), processing thousands of timetable records per run",
       "Designed and shipped gRPC services and MQTT-based real-time messaging in the Transport Control Center app, delivering vehicle and dispatch events to hundreds of concurrent clients with sub-second latency",
@@ -34,7 +34,7 @@ export const experiences: ExperienceItem[] = [
       "Automated printer-leasing management and meter-reading sync to SAP using Azure Functions, Logic Apps and Power Automate, replacing 32 hours/month of manual entry",
       "Built a Business Document Processor using Azure AI classification and extraction, reaching 95% extraction accuracy across 3 document types",
       "Maintained and extended a legacy Abacus ERP master-data sync over SOAP with zero data-loss incidents",
-      "Mentored 2 engineers through onboarding and code review; awarded Employee of the Month (Feb 2024) for mentorship and delivery",
+      "Mentored 2 engineers through onboarding and code review",
     ],
     tags: [
       "C#",
@@ -50,5 +50,51 @@ export const experiences: ExperienceItem[] = [
       "Azure AI",
       "SOAP",
     ],
+  },
+  {
+    id: "welldev-mid",
+    role: "Software Engineer",
+    company: "WellDev Ltd",
+    companyUrl: "https://welldev.io",
+    location: "Dhaka, Bangladesh (clients in Switzerland/EU)",
+    startDate: "Jul 2024",
+    endDate: "Jun 2025",
+    type: "full-time",
+    summary:
+      "Software Engineer at WellDev, building production .NET systems.",
+    highlights: [
+    ],
+    tags: ["C#", ".NET"],
+  },
+  {
+    id: "welldev-junior",
+    role: "Junior Software Engineer",
+    company: "WellDev Ltd",
+    companyUrl: "https://welldev.io",
+    location: "Dhaka, Bangladesh (clients in Switzerland/EU)",
+    startDate: "May 2023",
+    endDate: "Jun 2024",
+    type: "full-time",
+    summary:
+      "Junior Software Engineer at WellDev, building production .NET systems.",
+    highlights: [
+      "Awarded Employee of the Month (Feb 2024) for mentorship and delivery",
+    ],
+    tags: ["C#", ".NET"],
+  },
+  {
+    id: "welldev-trainee",
+    role: "Trainee Software Engineer",
+    company: "WellDev Ltd",
+    companyUrl: "https://welldev.io",
+    location: "Dhaka, Bangladesh (clients in Switzerland/EU)",
+    startDate: "Oct 2022",
+    endDate: "Apr 2023",
+    type: "full-time",
+    summary:
+      "Started my career at WellDev as a Trainee Software Engineer.",
+    highlights: [
+    ],
+    tags: ["C#", ".NET"],
   },
 ];

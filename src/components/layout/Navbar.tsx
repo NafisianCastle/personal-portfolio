@@ -1,25 +1,31 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 function Logo() {
+  const pathname = usePathname();
+
   return (
-    <a
-      href="#hero"
+    <Link
+      href="/"
       onClick={(e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        if (pathname === "/") {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
       }}
       className="group flex items-center gap-2 font-display text-lg font-bold"
       style={{ fontFamily: "var(--font-space-grotesk)" }}
@@ -31,7 +37,7 @@ function Logo() {
       <span className="hidden text-text-primary sm:block">
         Nafisur<span className="text-brand-500">.</span>
       </span>
-    </a>
+    </Link>
   );
 }
 
@@ -44,12 +50,14 @@ function NavLink({
   label: string;
   onClick?: () => void;
 }) {
-  const isExternal = !href.startsWith("#");
+  const pathname = usePathname();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!isExternal) {
+    // Smooth-scroll only when the section is on the current page;
+    // otherwise let the link navigate (e.g. /blog → /#about).
+    if (href.startsWith("/#") && pathname === "/") {
       e.preventDefault();
-      const target = document.querySelector(href);
+      const target = document.querySelector(href.slice(1));
       if (target) {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
@@ -58,20 +66,28 @@ function NavLink({
   };
 
   return (
-    <a
+    <Link
       href={href}
       onClick={handleClick}
       className="group relative text-sm font-medium text-text-secondary transition-colors duration-200 hover:text-text-primary"
     >
       {label}
       <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-brand-500 transition-all duration-300 group-hover:w-full" />
-    </a>
+    </Link>
   );
 }
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Arriving from another page via /#section: Next.js skips its hash scroll
+  // when the target already looks "in view" (About sits right below the hero).
+  useEffect(() => {
+    if (pathname !== "/" || !window.location.hash) return;
+    document.querySelector(window.location.hash)?.scrollIntoView({ block: "start" });
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
